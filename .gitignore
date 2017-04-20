@@ -1,0 +1,29 @@
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
+
+# Dependency directory
+node_modules
+
+# Babel compiled sources
+lib
+
+# Miscellaneous
+*~
+*#
+*.sublime-*
+.DS_STORE
+.netbeans
+.idea
+.project
+.node_history
+nbproject
+npm-debug.log
