@@ -39,6 +39,8 @@
     "babel-preset-react": "6.x"
   },
   "dependencies": {
-    "react": "^15.5.4"
+    "react": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "redux": "^3.6.0"
   }
 }
