@@ -1,9 +1,3 @@
-import React from 'react'
-
-const Test = () => (
-  <div className="b-test">
-    Test component
-  </div>
-)
-
-export default Test
+export { default as withLexContext } from './hocs/withLexContext'
+export { default as withLex } from './hocs/withLex'
+export { default as reducer, setLang } from './redux/reducer'
