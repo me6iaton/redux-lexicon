@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 export default function withLex(namespace) {
   return Content => {
-    class withLex extends Component {
+    class WithLex extends Component {
       static contextTypes = {
         lexiconLex: PropTypes.object.isRequired
       }
@@ -16,5 +16,6 @@ export default function withLex(namespace) {
         return <Content {...this.props} lex={lex} />
       }
     }
+    return WithLex
   }
 }

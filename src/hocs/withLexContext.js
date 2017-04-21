@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 export default function withLexContext(mapStateToLang, mapStateToLexicon) {
   return Content => {
-    class LexProvider extends Component {
+    class WithLexContext extends Component {
       static childContextTypes = {
         lexiconLex: PropTypes.object.isRequired
       }
@@ -28,6 +28,6 @@ export default function withLexContext(mapStateToLang, mapStateToLexicon) {
         lexicon: mapStateToLexicon(state),
       }
     }
-    return connect(mapStateToProps)(LexProvider)
+    return connect(mapStateToProps)(WithLexContext)
   }
 }
