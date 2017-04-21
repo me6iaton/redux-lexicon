@@ -90,4 +90,4 @@ componentKey - optional, get only componentKey fields from lexicon
   export default enhanceLex(YouComponent)
   ```
 
-* get translate strings from lex prop in YouComponent
+4. get translate strings from lex prop in YouComponent
