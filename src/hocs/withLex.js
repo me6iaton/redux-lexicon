@@ -1,15 +1,15 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 
-export default function withLex(namespace) {
+export default function withLex(cmpKey) {
   return Content => {
     class WithLex extends Component {
       static contextTypes = {
         lexiconLex: PropTypes.object.isRequired
       }
       render() {
-        const lexiconLex = this.context.lexiconLex
-        const lex = namespace ? lexiconLex[namespace] : lexiconLex
+        const lexLex = this.context.lexiconLex
+        const lex = (cmpKey && lexLex[cmpKey]) ? lexLex[cmpKey] : lexLex
         return <Content {...this.props} lex={lex} />
       }
     }
