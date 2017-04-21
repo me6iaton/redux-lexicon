@@ -86,7 +86,7 @@ componentKey - optional, get only componentKey fields from lexicon
     ...
   }
 
-  const enhanceLex = withLex(youComponent)
+  const enhanceLex = withLex('youComponent')
   export default enhanceLex(YouComponent)
   ```
 
