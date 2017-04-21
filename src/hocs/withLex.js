@@ -7,9 +7,6 @@ export default function withLex(namespace) {
       static contextTypes = {
         lexiconLex: PropTypes.object.isRequired
       }
-      static propTypes = {
-        children: PropTypes.object.isRequired,
-      }
       render() {
         const lexiconLex = this.context.lexiconLex
         const lex = namespace ? lexiconLex[namespace] : lexiconLex
