@@ -30,6 +30,13 @@ mapStateToLexicon - lexicon selector
 HOC - add lex prop to WrappedComponent </br>
 componentKey - optional, get only componentKey fields from lexicon
 
+```javascript
+withLex()(YouCmp)
+withLex('YouCmp')(YouCmp)
+withLex('YouCmp', 'OtherCmp')(YouComp)
+withLex('YouCmp', 'FerstCmp', 'SecondCmp')(YouComp)
+```
+
 ## Usage
 
 1. connect lexicon and currentLang reducers to redux store
@@ -40,22 +47,22 @@ componentKey - optional, get only componentKey fields from lexicon
 
   ```
   {
-    "en": {
-      "component1": {
-        "key1": "en translate",
-        "key2": "en translate"
+    en: {
+      component1: {
+        key1: "en translate",
+        key2: "en translate"
       },
-      "component2": {
-        "key1": "en translate"
+      component2: {
+        key1: "en translate"
       }
     },
-    "ru": {
-      "component1": {
-        "key1": "ru translate",
-        "key2": "ru translate"
+    ru: {
+      component1: {
+        key1: "ru translate",
+        key2: "ru translate"
       },
-      "component2": {
-        "key1": " ru translate"
+      component2: {
+        key1: " ru translate"
       }
     }
   }
