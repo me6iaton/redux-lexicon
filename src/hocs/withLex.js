@@ -9,7 +9,7 @@ export default function withLex(cmpKey, ...otherCmpKeys) {
       }
       getLex() {
         const lexLex = this.context.lexiconLex
-        if (otherCmpKeys) {
+        if (otherCmpKeys && otherCmpKeys.length) {
           const allCmpKeys = [cmpKey, ...otherCmpKeys]
           return allCmpKeys.reduce((acc, cmpKey) => {
             acc[cmpKey] = lexLex[cmpKey]
