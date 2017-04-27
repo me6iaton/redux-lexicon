@@ -1,6 +1,6 @@
 {
   "name": "redux-lexicon",
-  "version": "0.4.9",
+  "version": "0.5.0",
   "description": "React / Redux localization tool",
   "main": "lib/index.js",
   "scripts": {
@@ -40,6 +40,6 @@
   },
   "dependencies": {
     "react": "15.x",
-    "react-redux": "4.x"
+    "react-redux": "^5.x"
   }
 }
