@@ -15,7 +15,7 @@ export default function withLex(cmpKey, ...otherCmpKeys) {
             acc[cmpKey] = lexLex[cmpKey]
             return acc
           }, {})
-        } else if (cmpKey) {
+        } else if (cmpKey && lexLex[cmpKey]) {
           return lexLex[cmpKey]
         } else {
           return lexLex
