@@ -10,7 +10,6 @@ export default function withLexContext(mapStateToLang, mapStateToLexicon) {
       static propTypes = {
         lang: PropTypes.string.isRequired,
         lexicon: PropTypes.object.isRequired,
-        children: PropTypes.object.isRequired,
       }
       getChildContext() {
         const {lexicon, lang} = this.props
