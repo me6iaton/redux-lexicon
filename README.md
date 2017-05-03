@@ -19,11 +19,12 @@ currentLang reducer
 
 update currentLang action creator
 
-#### withLexContext( mapStateToLang, mapStateToLexicon )( WrappedComponent )
+#### withLexContext( mapStateToLang, mapStateToLexicon, defLang = 'en' )( WrappedComponent )
 
 HOC - add lexicon context to App component </br>
 mapStateToLang - currentLang selector </br>
 mapStateToLexicon - lexicon selector
+defLang - default lang
 
 #### withLex( [componentKey] )(WrappedComponent)
 

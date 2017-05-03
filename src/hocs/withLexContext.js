@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 
-export default function withLexContext(mapStateToLang, mapStateToLexicon) {
+function withLexContext(mapStateToLang, mapStateToLexicon, defLang = 'en') {
   return Content => {
     class WithLexContext extends Component {
       static childContextTypes = {
@@ -13,9 +13,13 @@ export default function withLexContext(mapStateToLang, mapStateToLexicon) {
       }
       getChildContext() {
         const {lexicon, lang} = this.props
-        return {
-          lexiconLex: (lexicon && lexicon[lang]) ? lexicon[lang] : {}
+        let lexiconLex = {}
+        if (lexicon && lexicon[lang]) {
+          lexiconLex = lexicon[lang]
+        } else if (lexicon && lexicon[defLang]) {
+          lexiconLex = lexicon[defLang]
         }
+        return { lexiconLex }
       }
       render() {
         return <Content {...this.props}/>
@@ -30,3 +34,5 @@ export default function withLexContext(mapStateToLang, mapStateToLexicon) {
     return connect(mapStateToProps)(WithLexContext)
   }
 }
+
+export default withLexContext
